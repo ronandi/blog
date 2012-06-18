@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'ostruct'
 require 'time'
 require 'github_hook'
+require 'yaml'
 
 class Blog < Sinatra::Base
     use GithubHook
@@ -9,13 +10,13 @@ class Blog < Sinatra::Base
     set :articles, []
     set :app_file, __FILE__
 
-    Dir.glob "#{root}/articles/*.md" do |fiie|
+    Dir.glob "#{root}/articles/*.md" do |file|
         #parse metadata and content from file
         meta, content = File.read(file).split("\n\n", 2);
 
         #generate a metadata obj
         article = OpenStruct.new YAML.load(meta)
-        article.date = Time.parse article.data.to_s
+        article.date = Time.parse article.date.to_s
         article.content = content
         article.slug = File.basename(file, '.md')
         

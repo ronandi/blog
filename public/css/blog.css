@@ -1,21 +1,50 @@
-body {
-    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+div#title h1 {
+    display:inline;
+    font-family: 'Dosis', sans-serif; font-weight: 400;
+    font-size: 64px;
+    width: auto;
+    color: #000;
+    border-style:dashed;
+    border-width:6px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+div#title header {
+    text-align: center;
+    margin: 100px 50px 20px;
 }
 
 article {
-    min-width: 300px; max-width: 700px; margin: 50px auto; padding: 0 50px;
+    margin: 80px 300px 20px;
 }
-header h1 {
-    margin: 0; 
+
+article h1 {
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 28px;
 }
-header a {
+
+article h1 a:visited{
+    text-decoration:none;
+}
+article h1 a:link{
+    text-decoration:none;
     color: #000;
-    text-decoration: none; text-shadow: 1px 1px 2px #555;
 }
-header a:hover { 
-    text-decoration: underline;
+article h1 a:active{
+    text-decoration:none;
 }
-header time {
-    font-size: 80%;
-    color: #555; 
+
+article time {
+    font-family: 'Dosis', sans-serif; font-weight: 400;
+    font-size: 14px;
+}
+
+article section {
+    padding-top:10px;
+    padding-bottom:10px;
+    font-family: 'Concert One', cursive;
+    font-size: 14px;
 }
